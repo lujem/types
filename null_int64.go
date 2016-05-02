@@ -35,7 +35,7 @@ func (n *NullInt64) UnmarshalJSON(b []byte) error {
 		return err
 	}
 	n.Int64 = val
-	n.Valid = (string(b) == "")
+	n.Valid = (string(b) != "")
 
 	return nil
 }

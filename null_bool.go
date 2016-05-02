@@ -30,7 +30,7 @@ func (n *NullBool) UnmarshalJSON(b []byte) error {
 		return err
 	}
 	n.Bool = val
-	n.Valid = (string(b) == "")
+	n.Valid = (string(b) != "")
 
 	return nil
 }
